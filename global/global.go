@@ -3,6 +3,7 @@ package global
 import (
 	"wheatwaves/config"
 
+	"github.com/sirupsen/logrus"
 	"gorm.io/gorm"
 )
 
@@ -10,5 +11,6 @@ import (
 var (
 	Config *config.Config
 	DB     *gorm.DB
+	Log    *logrus.Logger
 	// 使用指针便于修改
 )
