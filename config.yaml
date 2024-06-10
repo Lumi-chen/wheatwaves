@@ -2,9 +2,9 @@
 mysql:
   host: localhost
   port: 3306
-  db:
-  user:
-  password:
+  db: wheatwaves
+  user: root
+  password: root123456
   log_level: dev #日志登记
 
 # 系统相关配置
