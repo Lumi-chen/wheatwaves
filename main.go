@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"wheatwaves/core"
 	"wheatwaves/global"
+	"wheatwaves/routers"
 )
 
 func main() {
@@ -16,4 +17,7 @@ func main() {
 	global.DB = core.InitGorm()
 	fmt.Println("\n", global.Config)
 	fmt.Println("\n", global.DB)
+
+	router := routers.InitRouter()
+	router.Run(global.Config.System.Addr())
 }
