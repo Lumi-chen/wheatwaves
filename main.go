@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"wheatwaves/core"
+	"wheatwaves/flags"
 	"wheatwaves/global"
 	"wheatwaves/routers"
 )
@@ -17,7 +18,12 @@ func main() {
 	global.DB = core.InitGorm()
 	fmt.Println("\n", global.Config)
 	fmt.Println("\n", global.DB)
-
+	// 迁移表结构
+	option := flags.Parse()
+	if !flags.IsWebStop(option) {
+		flags.SwitchOption(option)
+		return
+	}
 	router := routers.InitRouter()
 	router.Run(global.Config.System.Addr())
 }

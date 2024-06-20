@@ -8,8 +8,13 @@ import (
 )
 
 type MODEL struct {
-	ID         uuid.UUID `gorm:"type:uuid;default:uuid_generate_v4();primaryKey"`
+	ID         uuid.UUID `gorm:"type:varchar(36)"`
 	CreateTime time.Time
 	UpdateTime time.Time
 	DeleteTime gorm.DeletedAt `gorm:"index"`
+}
+
+func (u *MODEL) BeforeCreate(tx *gorm.DB) (err error) {
+	u.ID = uuid.New()
+	return
 }
