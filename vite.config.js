@@ -6,6 +6,12 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  server: {
+    port: 9527,
+    proxy: {
+      // 代理
+    }
+  },
   plugins: [
     vue(),
     vueJsx(),

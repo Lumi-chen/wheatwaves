@@ -1,0 +1,59 @@
+/* 日间模式 start */
+#app.day {
+  background-color: #f0f2f5;
+  color: #000;
+
+  .theme {
+    background-color: #ffffff;
+  }
+}
+
+/* 日间模式 end */
+
+/* 夜间模式 start */
+#app.dark {
+  background-color: #1a2035;
+  color: #fff !important;
+
+  .theme {
+    background-color: #313852;
+  }
+
+  .menu {
+    background: linear-gradient(195deg, #323a54, #1a2035);
+  }
+}
+
+/* 夜间模式 end */
+
+/* 定义根作用域下的变量 */
+:root {
+  --theme-background: #f0f2f5;
+  --theme-box-backgroud: #ffffff;
+}
+
+/* 更改dark类名下变量的取值 */
+.dark {
+  --theme-box-backgroud: #313852;
+  --theme-background: #1a2035;
+  --el-text-color-primary: #fff;
+  --el-text-color-regular: #fff;
+  --el-text-color-secondary: #fff;
+  --el-text-color-placeholder: #fff;
+  --el-text-color-disabled: #fff;
+}
+
+/* 更改day类名下变量的取值 */
+.day {
+  --theme-background: #f0f2f5;
+  --theme-box-backgroud: #ffffff;
+}
+
+/* 使用变量 */
+#app {
+  background: var(--theme-background);
+
+  .box {
+    background: var(--theme-box-backgroud);
+  }
+}
