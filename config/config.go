@@ -6,4 +6,5 @@ type Config struct {
 	MySql  MySql  `yaml:"mysql"`
 	System System `yaml:"system"`
 	Logger Logger `yaml:"logger"`
+	Jwy    Jwy    `yaml:"jwy"`
 }

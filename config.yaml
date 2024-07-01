@@ -19,3 +19,9 @@ logger:
   director: log
   show_line: true # 是否显示行号(例如出错文件行号)
   log_in_console: true #是否显示文件路径
+
+# jwy
+jwy:
+  secret: xxx
+  expires: 2 # token有效时间两小时
+  issuer: "wheatwaves" # 签发人

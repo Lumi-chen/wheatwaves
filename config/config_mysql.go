@@ -14,5 +14,5 @@ type MySql struct {
 
 // 连接数据库
 func (m *MySql) Dsn() string {
-	return m.User + ":" + m.Password + "@tcp(" + m.Host + ":" + strconv.Itoa(m.Port) + ")/" + m.DB + "?" + m.Config
+	return m.User + ":" + m.Password + "@tcp(" + m.Host + ":" + strconv.Itoa(m.Port) + ")/" + m.DB + "?charset=utf8&parseTime=True" + m.Config
 }

@@ -8,9 +8,9 @@ import (
 )
 
 type MODEL struct {
-	ID         uuid.UUID `gorm:"type:varchar(36)"`
-	CreateTime time.Time
-	UpdateTime time.Time
+	ID         uuid.UUID      `gorm:"type:varchar(36)"`
+	CreateTime time.Time      `gorm:"type:datetime(0);autoUpdateTime"`
+	UpdateTime time.Time      `gorm:"type:datetime(0);autoUpdateTime"`
 	DeleteTime gorm.DeletedAt `gorm:"index"`
 }
 

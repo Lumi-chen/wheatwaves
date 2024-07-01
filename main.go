@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"wheatwaves/core"
 	"wheatwaves/flags"
 	"wheatwaves/global"
@@ -16,8 +15,8 @@ func main() {
 	// 测试：global.Log.Warn("警告啦")
 	// 连接数据库
 	global.DB = core.InitGorm()
-	fmt.Println("\n", global.Config)
-	fmt.Println("\n", global.DB)
+	// fmt.Println("\n", global.Config)
+	// fmt.Println("\n", global.DB)
 	// 迁移表结构
 	option := flags.Parse()
 	if !flags.IsWebStop(option) {
